@@ -29,6 +29,8 @@ add_library(video_core STATIC
     gpu_synch.h
     gpu_thread.cpp
     gpu_thread.h
+    guest_driver.cpp
+    guest_driver.h
     macro_interpreter.cpp
     macro_interpreter.h
     memory_manager.cpp
@@ -154,6 +156,7 @@ if (ENABLE_VULKAN)
         renderer_vulkan/maxwell_to_vk.cpp
         renderer_vulkan/maxwell_to_vk.h
         renderer_vulkan/renderer_vulkan.h
+        renderer_vulkan/renderer_vulkan.cpp
         renderer_vulkan/vk_blit_screen.cpp
         renderer_vulkan/vk_blit_screen.h
         renderer_vulkan/vk_buffer_cache.cpp
