@@ -295,8 +295,10 @@ void OpenGLState::ApplyViewport() {
             current.scissor.y = updated.scissor.y;
             current.scissor.width = updated.scissor.width;
             current.scissor.height = updated.scissor.height;
-            glScissorIndexed(i, updated.scissor.x, updated.scissor.y, updated.scissor.width,
-                             updated.scissor.height);
+            glScissorIndexed(i, updated.scissor.x,
+                             updated.scissor.y +
+                                 (updated.scissor.y > 0 ? updated.scissor.height : 0),
+                             updated.scissor.width, updated.scissor.height);
         }
     }
 }
